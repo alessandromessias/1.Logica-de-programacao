@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+    <head><title>Aulas de lógica de Programação</title>
+        <meta charset="utf-8">
+    </head>
+
+    <style>
+        #jogo *{
+            display: inline-block;
+        }
+        #d1,#d2 {
+            width: 150px;
+            height: 150px;
+            background-image: url(jogo/d1.png);
+            background-size: 100% 100%;
+        }
+        #mensagem{
+            border: 1px solid black;
+            width: 300px;
+            padding: 10px;
+        }
+
+    </style>
+
+    <body>
+       
+        <P>Para ver os resultados no console, clique com o botão direito do mouse e escolha "Inspecionar"</P>
+            <div>
+                <a href="exemplo1.html">EXEMPLO 1</a>
+                <a href="exemplo2.html">EXEMPLO 2</a>
+                <a href="exemplo3.html">EXEMPLO 3</a>
+            </div>
+        <h3>Imprimindo resultados na tela</h3>
+        <p>Jogo dos Dados</p>
+        <div id="jogo">
+            <div id="d1"></div>
+            <img src="jogo/plus.png" width="40" />
+            <div id="d2"></div>
+            <button id="btjogo">JOGAR</button>
+        </div>
+        <p id="mensagem"></p>
+        
+    </body>
+        <script>
+            // Jogo dos dados
+            let d1,d2,btjogo,sorteio1,sorteio2,mensagem,resultado
+            d1=document.querySelector("#d1")
+            d2=document.querySelector("#d2")
+            btjogo=document.querySelector("#btjogo")
+            mensagem=document.querySelector("#mensagem")
+            
+            function jogar(){
+                sorteio1=parseInt(Math.random()*6)+1
+                sorteio2=parseInt(Math.random()*6)+1
+                console.log(sorteio1,sorteio2)
+                d1.style["background-image"]="url(jogo/d" +sorteio1+".png)"
+                d2.style["background-image"]="url(jogo/d" +sorteio2+".png)"
+                var soma=sorteio1+sorteio2
+                if (soma%2 == 0) {resultado="PAR"}else{resultado="ÍMPAR"}
+                    
+                mensagem.innerHTML=soma + " - " + resultado
+            }
+
+            jogar()
+
+            btjogo.onclick=function(){
+                jogar()
+            }
+            
+        </script>
+</html>

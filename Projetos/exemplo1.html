@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+    <head><title>Aulas de lógica de Programação</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <P>Para ver os resultados, clique com o botão direito do mouse e escolha "Inspecionar"</P>
+            <div>
+                <a href="exemplo2.html">EXEMPLO 2</a>
+                <a href="exemplo3.html">EXEMPLO 3</a>
+                <a href="exemplo4.html">EXEMPLO 4</a>
+            </div>
+        <h3>Itens Abordados</h3>
+        <ul>
+            <li>Variáveis</li>
+            <li>Tipos de Variáveis (string, number, boolean, object)</li>
+            <li>Ternário</li>
+            <li>Math.random - criação de números aleatórios</li>
+            <li>Operadores de comparação</li>
+            <li>Operadores de Aritméticos</li>
+            <li>Operadores de Módulo %</li>
+            <li>Conceito de Arrays</li>
+        </ul>
+    </body>
+        <script>
+            console.log('Testando Javascript')
+            /*
+            Trechos de textos que interessam ao programador
+            */
+           //Comentário de linha única
+
+           //1. Variáveis========================
+           //Tipos básicos= number, string, boolean
+           var total= 150.35 //declaração da váriavel e atribuindo um valor
+           total=total +50// incremento de 50 na váriavel
+           console.log(total)//retorna o valor
+           console.log(typeof(total))//retorna o tipo
+
+           var associado=false //true o false - boolean
+           console.log(associado) //false
+           console.log(typeof(associado))
+           console.log('O valor do total é maior ou igual 200.35: ' + (total >=200.35) )// == faz uma pergunta "comparação"
+
+           var estoque = 49
+           total = total+estoque
+           console.log(total)
+
+           const desconto = 10
+           //desconto = 20 //error valor const não pode ser alterado
+
+            var sorteio = parseInt(Math.random() * 1452) + 1
+            //Math.random () gera números aleatórios a partir do zero
+            //caso queira sortear a partir do 1 até o limite, inclua +1 fora dos parenteses
+            //aritméticos básicos + - * /
+            var msg=''
+            sorteio % 2 == 0  ? msg = 'PAR' : msg = 'ÍMPAR'
+            // o que resta da divisão por 2) é igual a zero ?
+            // caso sim msg = PAR' : caso contrário msg= 'ÍMPAR'
+
+            //if tradicional
+                if(sorteio % 2 == 0){
+                    msg='PAR'
+                }else{
+                    msg='ÍMPAR'
+                }
+
+            console.log(' O número ' + sorteio + ' é ' + msg)
+
+            console.log(sorteio % 2 == 0)// retorna o restante da divisão
+            console.log('O valor do sorteio é igual 1452:' + (sorteio ==1452))
+            alert('Aprendendo lógica de programação')
+            confirm('Você concorda em estudar lógica?')
+
+            var locais = new Array('Brasil', 'Espanha','Portugal')  
+            //              0         1         2         3
+
+            var cores=['verde', 'vermelho','laranja','marrom']
+            cores.push('Amarelo')
+            //array
+            console.log(typeof(cores))
+            console.log(cores.length)//5
+            var totalcores = cores.length;
+            console.log(locais)
+            console.log(cores[ parseInt( Math.random()*totalcores ) ])
+
+        </script>
+</html>

@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+    <head><title>Aulas de lógica de Programação</title>
+        <meta charset="utf-8">
+    </head>
+
+    <body>
+        <P>Para ver os resultados no console, clique com o botão direito do mouse e escolha "Inspecionar"</P>
+            <div>
+                <a href="exemplo1.html">EXEMPLO 1</a>
+                <a href="exemplo3.html">EXEMPLO 3</a>
+                <a href="exemplo4.html">EXEMPLO 4</a>
+            </div>
+        <h3>Itens Abordados</h3>
+        <ul>
+            
+        </ul>
+    </body>
+        <script>
+            console.log('Testando Javascript')
+            
+            var nivel=1           
+            //switch case avalia o valor de uma variável
+            switch(nivel){
+                case 0 :
+                        console.log("Nível 0: Usuário Basic")
+                    break
+                    case 1 :
+                        console.log("Nível 1:Usuário VIP")
+                    break
+                    default:
+                        console.log('Nível não existente') 
+                    break          
+            }
+            //Funções e condicionais
+            function alerta (){
+                console.log("Cadastre-se para ganhar descontos!")
+                if(nivel == 1){
+                    console.log("Aproveite seu status VIP para compras internacionais!!!")
+                }
+            }
+
+            alerta();
+
+            function divulgaProduto(produto,parcela){
+                console.log("Aproveite " + produto + " em até " + parcela + " x sem juros")
+            }
+
+            divulgaProduto(' Micro Ondas',8);           
+            
+            /////////////////
+            let categoria="Eletrônicos"
+            let oferta=0
+
+            function compra (produto, valor,cor){
+                if(oferta == 0){
+                    categoria="Eletrodomésticos"
+                }else{
+                    categoria="Eletrônico"
+                }
+                console.log( "Voce está comprando " + categoria + ": " + produto + "," + cor + " no valor de R$" + valor)
+            }
+            // valor categoria= "Eletrodomésticos" // err por redeclarar
+            console.log(categoria);
+            compra("TV65", 3000, "Prata")
+            compra("Notebook Dell", 6000, "Prata")
+
+        </script>
+</html>
